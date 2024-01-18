@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  postgres_db:
+    container_name: db_postgres
+    image: postgres:15.5
+    environment:
+      - POSTGRES_PASSWORD=superuser
+    volumes:
+      - db_pizarra-vol:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
+  pgAdmin:
+    container_name: pgAdmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=espinal@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=superuser
+    volumes:
+      - pgAdmin-vol:/var/lib/pgadmin
+    depends_on:
+      - postgres_db
+    image: dpage/pgadmin4:8.1
+    ports:
+      - "8080:80"
+    restart: always
+
+volumes:
+  db_pizarra-vol:
+  pgAdmin-vol:
