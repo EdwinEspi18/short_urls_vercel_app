@@ -64,49 +64,55 @@ export function CardSlug(props: CardSlugProps) {
 
   return (
     <>
-      <Card className="relative">
+      <Card className='relative'>
         <CardHeader>
           <CardTitle>
             <Link
-              className="cursor-pointer font-medium transition-all hover:font-bold"
+              className='cursor-pointer font-medium transition-all hover:font-bold'
               href={`${getBaseUrl()}/q/${slug_url}`}
-              target="_blank"
+              target='_blank'
             >
               /{slug_url}
             </Link>
           </CardTitle>
-          <CardDescription className="truncate font-medium">{original_url}</CardDescription>
+          <CardDescription className='truncate font-medium'>
+            {original_url}
+          </CardDescription>
         </CardHeader>
         {description ? (
           <CardContent>
             <p>{description}</p>
           </CardContent>
         ) : null}
-        <CardFooter className="absolute right-0 top-3">
+        <CardFooter className='absolute right-0 top-3'>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button type="button" variant="ghost">
-                <Sliders className="h-5 w-5" />
+              <Button type='button' variant='ghost'>
+                <Sliders className='h-5 w-5' />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-40">
-              <DropdownMenuLabel className="text-center">Options</DropdownMenuLabel>
+            <DropdownMenuContent className='w-40'>
+              <DropdownMenuLabel className='text-center'>
+                Options
+              </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuItem
-                  onClick={() => copyToClipboard(`http://localhost:3000/q/${slug_url}`)}
+                  onClick={() =>
+                    copyToClipboard(`short-urls-vercel-app.vercel.app/q/${slug_url}`)
+                  }
                 >
-                  <Copy className="mr-2 h-4 w-4" />
+                  <Copy className='mr-2 h-4 w-4' />
                   <span>Copy</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => setToogleModal(!toogleModal)}>
-                  <Edit className="mr-2 h-4 w-4" />
+                  <Edit className='mr-2 h-4 w-4' />
                   <span>Edit</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => deleteSlug(id)}>
-                  <Trash className="mr-2 h-4 w-4" />
+                  <Trash className='mr-2 h-4 w-4' />
                   <span>Delete</span>
                 </DropdownMenuItem>
               </DropdownMenuGroup>
@@ -114,7 +120,11 @@ export function CardSlug(props: CardSlugProps) {
           </DropdownMenu>
         </CardFooter>
       </Card>
-      <DialogEdit editSlug={props} open={toogleModal} setOpen={setToogleModal} />
+      <DialogEdit
+        editSlug={props}
+        open={toogleModal}
+        setOpen={setToogleModal}
+      />
     </>
   );
 }
