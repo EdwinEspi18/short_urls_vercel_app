@@ -33,7 +33,7 @@ export function Header() {
     await supabase.auth.signInWithOAuth({
       provider: "github",
       options: {
-        redirectTo: "/auth/callback",
+        redirectTo: "https://short-urls-vercel-app.vercel.app/auth/callback",
       },
     });
 
