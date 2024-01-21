@@ -106,7 +106,11 @@ export function Header() {
         )}
 
         <Button asChild className="grid place-content-center rounded-full" variant="secondary">
-          <Link href="https://github.com/EdwinEspi18/shorten_url.git" target="_blank">
+          <Link
+            aria-label="Github Repository"
+            href="https://github.com/EdwinEspi18/shorten_url.git"
+            target="_blank"
+          >
             <GithubIcon />
           </Link>
         </Button>
