@@ -16,7 +16,13 @@ export const metadata: Metadata = {
   },
   description: "Shorten your URLs easily and quickly",
   keywords: ["short urls", "url", "link", "link short", "shorten"],
-  icons: "http://localhost:3000/favicon.ico",
+  icons: "https://www.edlives.live/favicon.ico",
+  openGraph: {
+    title: "Link Shortener",
+    type: "website",
+    images: "/opengraph-image.png",
+    url: "https://www.edlives.live/",
+  },
 };
 
 const inter = Inter({subsets: ["latin"]});
