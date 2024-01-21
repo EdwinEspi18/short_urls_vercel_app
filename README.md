@@ -1,4 +1,6 @@
-## Getting Started with shorted-links
+![git readme_Mesa de trabajo 1](https://github.com/EdwinEspi18/short_urls_vercel_app/assets/71328952/a3e840ef-8f58-4f7e-b279-85f8848ddca1)
+
+## Getting Started
 
 First, run the development server:
 
