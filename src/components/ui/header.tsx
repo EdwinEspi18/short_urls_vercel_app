@@ -67,7 +67,7 @@ export function Header() {
                 ) : (
                   <Hash className="me-2 h-6 w-6" />
                 )}
-                {user.user_metadata.name}
+                {user.user_metadata.name || user.user_metadata.user_name}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-full p-2">
