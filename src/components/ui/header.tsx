@@ -108,7 +108,7 @@ export function Header() {
         <Button asChild className="grid place-content-center rounded-full" variant="secondary">
           <Link
             aria-label="Github Repository"
-            href="https://github.com/EdwinEspi18/shorten_url.git"
+            href="https://github.com/EdwinEspi18/short_urls_vercel_app.git"
             target="_blank"
           >
             <GithubIcon />
