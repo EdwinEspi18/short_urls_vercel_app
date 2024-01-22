@@ -68,7 +68,7 @@ export function CardSlug(props: CardSlugProps) {
           <CardTitle>
             <Link
               className="cursor-pointer font-medium transition-all hover:font-bold"
-              href={`${getBaseUrl()}/q/${slug_url}`}
+              href={`https://www.edlives.live/q/${slug_url}`}
               target="_blank"
             >
               /{slug_url}
@@ -84,7 +84,7 @@ export function CardSlug(props: CardSlugProps) {
         <CardFooter className="absolute right-0 top-3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button type="button" variant="ghost">
+              <Button aria-label="Options short link" type="button" variant="ghost">
                 <Sliders className="h-5 w-5" />
               </Button>
             </DropdownMenuTrigger>
@@ -93,7 +93,7 @@ export function CardSlug(props: CardSlugProps) {
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuItem
-                  onClick={() => copyToClipboard(`short-urls-vercel-app.vercel.app/q/${slug_url}`)}
+                  onClick={() => copyToClipboard(`https://www.edlives.live/q/${slug_url}`)}
                 >
                   <Copy className="mr-2 h-4 w-4" />
                   <span>Copy</span>
